@@ -22,10 +22,13 @@ namespace lab3
 
                 try
                 {
+                    // When Convert.ToInt32 fails, while loop starts over. 
                     number = Convert.ToInt32(Console.ReadLine());
 
+                    //If the number entered doesn't fall into range, while loop starts over.
                     if (number > 100 || number < 0)
                     {
+                        // Notify user of entered number that is out of range
                         Console.WriteLine("please enter a number between 1 - 100");
                         continue;
                     }
@@ -59,7 +62,7 @@ namespace lab3
 
                     if (userContinue == "no" || userContinue == "n")
                     {
-                        Console.WriteLine($"OK. goodbye, {name}");
+                        Console.WriteLine($"OK. goodbye, {name}.");
                         break;
                     }
                     else
@@ -69,6 +72,7 @@ namespace lab3
                 }
                 catch
                 {
+                    // Notify user of incorrectly formatted number entry.
                     Console.WriteLine("Please enter number in integer format.");
                     continue;
                 }               
